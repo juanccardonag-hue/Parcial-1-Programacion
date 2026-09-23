@@ -4,7 +4,7 @@ public class Desarrollador {
     private String cedula;
     private String equipoTrabajo;
     private String nivel;
-    private  int numProyectosSimultaneos;
+    private int numProyectosSimultaneos;
     private double tarifaDiaria;
     private String estado;
 
@@ -20,7 +20,7 @@ public class Desarrollador {
         this.cedula = cedula;
     }
 
-    public String getCedula(){
+    public String getCedula() {
         return cedula;
     }
 
@@ -62,6 +62,13 @@ public class Desarrollador {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public boolean disponibilidadDesarrolador() {
+        if (estado != null && estado.equalsIgnoreCase("Disponible")) {
+            return true;
+        }
+        return false;
     }
 
 }
