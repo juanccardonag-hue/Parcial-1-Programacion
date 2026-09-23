@@ -6,6 +6,10 @@ public class EmpresaDevplus {
     private String direccion;
     private String telefono;
     private String paginaWeb;
+    private Cliente[] listClientes;
+    private Desarrollador[] listDesarrolladores;
+    private Proyecto[] listProyectos;
+    private ServiciosAdicionales[] listServicios;
 
     public EmpresaDevplus(String nit, String nombreComercial, String direccion, String telefono, String paginaWeb) {
         this.nit = nit;
@@ -13,6 +17,12 @@ public class EmpresaDevplus {
         this.direccion = direccion;
         this.telefono = telefono;
         this.paginaWeb = paginaWeb;
+        this.listClientes=new Cliente[10];
+        this.listDesarrolladores= new Desarrollador[10];
+        this.listProyectos= new Proyecto[10];
+        this.listServicios= new ServiciosAdicionales[10];
+
+
     }
 
     public String getNit() {
@@ -53,5 +63,20 @@ public class EmpresaDevplus {
 
     public void setPaginaWeb(String paginaWeb) {
         this.paginaWeb = paginaWeb;
+    }
+    public Cliente[] getListClientes() {
+        return listClientes;
+    }
+
+    public Desarrollador[] getListDesarrolladores() {
+        return listDesarrolladores;
+    }
+
+    public Proyecto[] getListProyectos() {
+        return listProyectos;
+    }
+
+    public ServiciosAdicionales[] getListServicios() {
+        return listServicios;
     }
 }

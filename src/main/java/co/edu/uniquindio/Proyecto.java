@@ -13,6 +13,9 @@ public class Proyecto {
     private int diasDesarrollo;
     private double descuentoClienteFrecuente;
 
+    private Desarrollador[] listDesarrolladores;
+    private ServiciosAdicionales[] listServiciosAdicionales;
+
     public Proyecto(String id, LocalDate fechaSolicitud, LocalDate fechaInicio,
                     LocalDate fechaEntrega, String estado, String metodoPago, double valorTotal, int diasDesarrollo, double descuentoClienteFrecuente) {
         this.id = id;
@@ -24,6 +27,8 @@ public class Proyecto {
         this.valorTotal = valorTotal;
         this.diasDesarrollo = diasDesarrollo;
         this.descuentoClienteFrecuente = descuentoClienteFrecuente;
+        this.listDesarrolladores= new Desarrollador[10];
+        this.listServiciosAdicionales= new ServiciosAdicionales[10];
     }
 
     public String getId() {
@@ -97,4 +102,13 @@ public class Proyecto {
     public void setDescuentoClienteFrecuente(double descuentoClienteFrecuente) {
         this.descuentoClienteFrecuente = descuentoClienteFrecuente;
     }
+
+    public Desarrollador[] getListDesarrolladores() {
+        return listDesarrolladores;
+    }
+
+    public ServiciosAdicionales[] getListServiciosAdicionales() {
+        return listServiciosAdicionales;
+    }
+
 }

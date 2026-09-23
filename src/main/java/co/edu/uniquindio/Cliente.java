@@ -7,12 +7,15 @@ public class Cliente {
     private String correo;
     private String pais;
 
+
+
     public Cliente(String cedula, String nombre,String telefono, String correo, String pais){
         this.cedula=cedula;
         this.nombre=nombre;
         this.telefono=telefono;
         this.correo=correo;
         this.pais=pais;
+
     }
 
     public String getNombre() {
@@ -54,4 +57,6 @@ public class Cliente {
     public String getCedula(){
         return cedula;
     }
+
+
 }
